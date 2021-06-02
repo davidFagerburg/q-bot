@@ -1,7 +1,6 @@
 require('dotenv').config();
 const questions = require('./questions');
 const tmi = require('tmi.js');
-const { createContext } = require('node:vm');
 
 const opts = {
     options: {
