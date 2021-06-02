@@ -1,6 +1,7 @@
 require('dotenv').config();
 const questions = require('./questions');
 const tmi = require('tmi.js');
+const { createContext } = require('node:vm');
 
 const opts = {
     options: {
@@ -28,7 +29,7 @@ const onMessage = (channel, context, msg, self) => {
             }
             break;
             case "timer":
-                if (context.username === process.env.CHANNEL_NAME || context.username === process.env.BOT_NAME) {
+            if (context.username === process.env.CHANNEL_NAME || context.mod) {
                     const args = msg.split(' ');
                     if (args[1] === 'clear') {
                         while (intervals.length) {
