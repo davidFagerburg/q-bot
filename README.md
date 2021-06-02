@@ -14,7 +14,7 @@ Commands can be run by the channel the bot is in or by any mod for that channel
 
 # To run bot locally:
 - `npm install`
-- set up your app with dev.twitch.tv
+- set up your app with [dev.twitch.tv](dev.twitch.tv)
 - authorize the app to use either your channel or a bot channel you own with the scopes channel:moderate, chat:read, and chat:edit
 - create a `.env` file
 - add values for `AUTH_TOKEN`, `BOT_NAME`, and `CHANNEL_NAME` to the `.env` file
